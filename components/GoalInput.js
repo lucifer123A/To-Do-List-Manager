@@ -10,6 +10,9 @@ const GoalInput = props =>{
       };
 
     const addGoalHandler= ()=> {
+      if(enteredText === ''){
+        return;
+      }
       props.goalAdd(enteredText);
       setInput('');
     };
